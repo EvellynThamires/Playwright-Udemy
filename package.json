@@ -1,0 +1,17 @@
+{
+  "name": "playwright-udemy",
+  "version": "1.0.0",
+  "description": "Studying automated software testing with Playwright",
+  "main": "index.js",
+  "scripts": {
+    "tests:chrome": "playwright test --config=playwright.config.ts --project=Chromium",
+    "tests:firefox": "playwright test --config=playwright.config.ts --project=Firefox",
+    "tests:webkit": "playwright test --config=playwright.config.ts --project=Webkit"
+  },
+  "author": "Evellyn",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.21.1",
+    "prettier": "^2.6.2"
+  }
+}
