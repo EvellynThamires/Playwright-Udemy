@@ -35,25 +35,6 @@ test.skip("Selectors", async ({page}) => {
   //XPath
   await page.click("//button")
 })
-
-test.skip("Social Media", async ({page}) => {
-  await page.goto("https://socialmedia-sit.bees-platform.dev/bees-social-web")
-
-  await page.type('//input[@type="email"]','evellynthamires.tiemyuyemura-ext@ab-inbev.com')
-  await page.click('//input[@type="submit"]')
-  await page.type('//input[@type="password"]','Aqu@rius2109')
-  await page.click("#idSIButton9")
-  await page.click(".table")
-  await page.click("#idTxtBx_SAOTCC_OTC")
-  await page.waitForTimeout(20000)
-  await page.click("#idSubmit_SAOTCC_Continue")
-  await page.click("#idSIButton9")
-  await page.waitForTimeout(20000)
-
-  const client = await page.locator("h1")
-  await expect(client).toContainText("CLIENTES")
-})
-
 test.describe("My first test suite", () => {
   test("Working with inputs @myTag", async ({page}) => {
     await page.goto("http://zero.webappsecurity.com/index.html")
