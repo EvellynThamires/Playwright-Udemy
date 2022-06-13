@@ -74,7 +74,7 @@ test.describe.parallel.only("Hooks", () => {
   })
   
   test("Single element screenshot", async({ page }) => {
-    const element = await page.$("h1")
+    const elemento = await page.$("h1")
     await element.screenshot({ path: "single_element_screenshot.png" })
   })
 })

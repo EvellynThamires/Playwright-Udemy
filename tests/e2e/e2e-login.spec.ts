@@ -15,6 +15,7 @@ test.describe.parallel("Login / Logout Flow", () => {
     test("Negative Scenario for login", async ({ page }) => {
         await homePage.clickOnSignIn()
         await loginPage.login("invalid username", "invalid password")
+        await loginPage.wait(3000)
         await loginPage.assertErrorMessage()
     })
 
@@ -22,8 +23,8 @@ test.describe.parallel("Login / Logout Flow", () => {
         await homePage.clickOnSignIn()
         await loginPage.login("username", "password")
 
-       //const accountSumaryTab = await page.locator("#account_summary_tab")
-        //await expect(accountSumaryTab).toBeVisible()
+        const accountSumaryTab = await page.locator("#account_summary_tab")
+        await expect(accountSumaryTab).toBeVisible()
 
         await page.goto("http://zero.webappsecurity.com/logout.html")
         await expect(page).toHaveURL("http://zero.webappsecurity.com/index.html")
