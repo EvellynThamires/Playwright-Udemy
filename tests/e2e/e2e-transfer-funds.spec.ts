@@ -24,19 +24,5 @@ test.describe("Transfer Funds and Make Payments", () => {
         await navBar.clickOnTab("Transfer Funds")
         await transferFundsPage.transferFunds()
         await transferFundsPage.successMessage()
-
-        // await page.click("#transfer_funds_tab")
-        // await page.selectOption("#tf_fromAccountId", "2")
-        // await page.selectOption("#tf_toAccountId", "3")
-        // await page.type("#tf_amount", "500")
-        // await page.type("#tf_description", "Text message")
-        // await page.click("#btn_submit")
-
-        // const boardHeader = await page.locator("h2.board-header")
-        // expect(boardHeader).toContainText("Verify")
-        // await page.click("#btn_submit")
-
-        // const message = await page.locator(".alert-success")
-        // expect(message).toContainText("You successfully submitted your transaction")
     })
 })
